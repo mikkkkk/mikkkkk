@@ -1,0 +1,169 @@
+body { 
+    background-color: #ffded5;
+    font-family:      Georgia, "Times New Roman", Times, serif;
+    font-size:        small;
+    margin:           0px;
+  }
+/* 页眉区 */
+.header {
+    /* 流动布局，文字排列在两端 */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #b35a5a;
+  }
+  .header-left, .header-right {
+    color: white;
+  }
+/* 导航栏 */
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #c96f6f;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+/* 内容1 */
+  #content2 {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 70px 10px 70px;
+    border-bottom: #363635 solid 6px;
+}
+/* c3图片格式 */
+.round-pic {
+    border-radius: 50%; /* 使图片变为圆形 */
+    width: 100px; /* 按需调整图片大小 */
+    height: auto;
+    display: block;
+    margin: 10px 110px 10px 100px;
+}
+
+#c3 p,#c4 h2{
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0; /* 上下外边距为10px */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px; /* 增加内边距以提高可读性 */
+    text-align: center; /* 内容居中 */
+}
+
+th {
+    background-color: #facece;
+}
+
+form label {
+    /* 设置<label>元素以块级元素形式显示 */
+    display: block;
+    margin-top: 10px;
+}
+/* 设置表单内所有的文本输入框样式 */
+form input[type="text"], form textarea {
+    width: 300px;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    height: 80px;
+    width: 300px;
+}
+
+#c3,.c4,.c5 {
+    width: 50%;
+    float: left; 
+}
+
+#c3 {
+    background-color: rgb(255, 197, 197);
+    width: 320px;
+    height: 280px;
+
+}
+
+#c4 {
+    background-color: rgb(227, 146, 146);
+    width: 320px;
+    height: 280px;
+
+}
+
+#c5 h2{
+    text-align: center;
+}
+
+#c5 {
+    background-color: rgb(255, 197, 197);
+    width: 320px;
+    height: 280px;
+
+}
+/* 内容2的样式 */
+.container{
+    /* 设置元素的定位模式为相对定位，允许子元素相对于它进行定位 */
+    position:relative;
+    /* 将容器的布局模式设置为弹性，使其子元素可以沿水平方向分布 */
+    display: flex;
+    /* 对齐 */
+    justify-content: center;
+    /* 设置容器的3D变换样式 */
+    transform-style: preserve-3d;
+}
+/* 调整box内容 */
+.container .box{
+    width: 300px;
+    height: 300px;
+    /* 定位布局为相对定位 */
+    position: relative;
+    transition: .5s;
+}
+/* 调整图片样式 */
+.container .box img {
+    /* 定位布局为绝对定位 */
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.container > *:hover ~ * /* 当一个子元素被hover时，选择其后的所有兄弟元素 */{
+    margin: 0 -20px;
+    /* 增加阴影效果 */
+    filter: drop-shadow(0 0 5px #585454)
+            drop-shadow(0 0 5px #5f5c5c);
+    /* 设置转动角度和大小以及沿着y轴转动 */
+    transform: perspective(500px) rotateY(-45deg) scale(0.95); 
+}
+.container .box:hover{
+    /* 将鼠标在的图片大小放大到原来的1.3倍 */
+    transform: scale(1.3); 
+}
+/* 页脚区 */ 
+#footer {
+    background-color: #b35a5a;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

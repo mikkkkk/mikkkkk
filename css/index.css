@@ -1,0 +1,118 @@
+
+/*欢迎页index.html的样式*/
+body{ 
+    /* 设置内外边距 */
+    margin: 0; 
+    padding: 0; 
+    /* 设置背景图片*/
+    background-image: url("image/welcomebg.jpg"); 
+    /* 调整背景图片大小，确保图片完全覆盖body元素*/
+    background-size: cover;   
+    /* 设置body为弹性布局，便于中心对齐内部内容 */
+    display: flex; 
+    /* 确保内容居中对齐 */
+    justify-content: center; 
+    align-items: center;  
+    /* 设置body的最小高度为视口高度的100%，确保至少占据全屏高度*/
+    min-height: 100vh;
+    /* 指定弹性布局的元素在垂直方向上排列*/
+    flex-direction: column;
+}
+
+h1 {
+color: #7e7e7e;
+font-family: Helvetica;
+margin: 0;
+padding: 0;
+/* 调整字体大小 */
+font-size: 8rem;
+/* 减少字符间的间隔提高页面美观 */
+letter-spacing: -0.3rem;
+/* 设置定位模式为相对定位 */
+position: relative;
+}
+
+/* 为'h1'元素创建一个伪元素 '::after'，用于设置h1的显示效果*/
+h1::after{
+    /* 通过'content'属性，将'h1'元素的'data-text'属性值作为伪元素的内容 */
+    content: attr(data-text);
+    color: #ffa200; 
+    /* 设置定位模式为绝对定位使其与h1重叠 */
+    position: absolute;
+    /* 定位伪元素，确保与h1重叠*/
+    left: 0;
+    top: 0;   
+    /* 应用clip-path效果，形成一个圆，创造遮罩效果 */
+    clip-path: circle(100px at 0% 50%);    
+    /* 应用名为'movelight'的关键帧动画，持续时间为5秒，无限循环 */
+    animation: movelight 5s infinite;
+}
+
+/* 定义动画的效果 */
+@keyframes movelight{
+    /* 0%进度，圆心位于元素的最左侧 */
+    0%{
+        clip-path: circle(100px at 0% 50%);
+    }
+    
+    /* 50%进度，圆心平移到元素的最右侧 */
+    50%{
+        clip-path: circle(100px at 100% 50%);
+    }
+    
+    /* 100%进度，圆心回到元素的最左侧，完成一个周期 */
+    100%{
+        clip-path: circle(100px at 0% 50%);
+    }
+}
+
+/*欢迎页enter的样式*/
+#enter {
+    top: 200px;
+    left: auto;
+    width:auto;
+    height: 25px;
+    background-color: rgb(117, 170, 117);/* 背景颜色为绿色 */
+    text-decoration: none; /* 去除下划线 */
+    padding: 10px 20px;
+    color: white; /* 文字颜色，确保在绿色背景上可读 */
+    /* 设定定位类型为相对定位 */
+    position:relative;
+  }
+
+/* 页脚区整体样式 */
+footer {
+    /* 设置页脚为100%宽度，适应屏幕 */
+    width: 100%;
+    /* 背景透明不遮挡背景图片 */
+    background-color: transparent; 
+    /* 设置页脚与上方内容的间距 */
+    /* 在flex布局中，使其贴底 */
+    margin-top: auto; 
+
+}
+
+/* 页脚内容样式 */
+.footer-content {
+    /* 文字居中对齐 */
+    text-align: center;
+    /* 设置内边距 */
+    padding: 20px 0;
+}
+
+/* 页脚文字样式 */
+.footer-content p {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* 确保页脚在页面底部，适用于流动布局 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* 如果需要flex布局让页脚始终在底部 */
+    display: flex;
+    flex-direction: column;
+}

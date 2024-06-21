@@ -1,0 +1,178 @@
+/* 统一文档格式 */
+* {
+  /* 外边距 */
+  margin: 0;
+  /* 内边距 */
+  padding: 0;
+  /* 设置盒模型的计算方式为 'border-box'。也就是宽度和高度的设定包括border和padding */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+  /* 页眉区样式 */
+  .header {
+    /* flex布局 */
+    display: flex;
+    /* 对齐方式，均匀分配 */
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #ffabab;
+  }
+  /* 左右内容样式 */
+  .header-left, .header-right {
+    color: white;
+  }
+/* 右侧链接样式 */
+  .header-right a{
+      color: white;
+      /* 去掉下划线 */
+      text-decoration: none;
+  }
+/* 图片容器 */
+  .image-container {
+    display: flex; /* 使用Flex布局 */
+    justify-content: space-between; /* 两端对齐*/
+  }
+  /* 图片格式 */
+  .image-wrapper {
+    flex-basis: 50%; /* 每个图片容器占据50%宽度 */
+    display: flex; /* 图片容器也使用Flex布局，确保图片能垂直居中等 */
+    align-items: center; /* 垂直居中对齐图片 */
+  }
+  
+  .image-wrapper img {
+    height: 200px;
+    width: 100%; /* 图片宽度自动适应容器宽度 */
+    object-fit: cover; /* 保持图片比例的同时填充容器*/
+  }
+  /* 导航栏样式 */
+  .navbar {
+    display: flex;
+    /* 均匀分布 */
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #ffabab;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+/* 内容区1 */
+  #content1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 70px 0px 70px;
+}
+
+#au{
+    height:8px;
+    background-color: #ffabab;
+    width: 530px;
+}
+
+#left-panel, .right-panel {
+    width: 50%;
+    float: left;
+}
+
+#left-panel {
+    background-color: white;
+    width: 530px;
+    height: 280px;
+
+}
+
+#right-panel {
+    background-color: rgb(253, 203, 203);
+    width: 530px;
+    height: 235px;
+
+}
+
+/* 表格样式 */
+#personal-info {
+    width: 100%;
+    /* 合并边框 */
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#personal-info th, 
+#personal-info td {
+    border: 2px solid #ffabab;
+    padding: 8px;
+    /* 靠左排列 */
+    text-align: left;
+}
+
+#personal-info th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+#personal-info tr:nth-child(even) {
+  /* 所有偶数行的背景颜色设置为浅灰色 */
+    background-color: #f8f8f8;
+}
+
+/*个人介绍段落样式*/
+#p1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-indent: 2em; /* 首行缩进2字符 */
+    }
+
+/* 内容区2 */
+.content2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.header2 {
+    background-color: rgb(253, 203, 203);
+    font-size: small;
+    color: white;
+    font-weight: bold;
+    /* 居中对齐 */
+    text-align: center;
+    height: 30px;
+    width: 100%;
+}
+
+.gallery {
+  /* 弹性布局 */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px; /* 为整个gallery添加左右内边距，以确保图片与页面边界之间有10px的间距 */
+    width: 100%;
+}
+
+.image-container1 {
+    flex: 1; /* 让每个图片容器平均分配剩余空间 */
+    margin-right: 10px; /* 图片间的间隔*/
+}
+
+.image-container1:last-child {
+    margin-right: 0; /* 移除最后一个图片容器的右边距 */
+}
+
+.image-container1 img {
+    width: 100%;
+    height: auto; 
+    max-height: 400px; /* 图片的最大高度限制 */
+    object-fit: contain; /* 图片缩放以适应容器 */
+}
+/* 页脚区 */
+#footer {
+    background-color: rgb(255, 141, 141);
+    color: white;
+    padding: 10px;
+    /* 居中 */
+    text-align: center;
+}

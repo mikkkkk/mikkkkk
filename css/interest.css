@@ -1,0 +1,116 @@
+/* 整体样式 */
+body { 
+  background-color: #ffded5;
+  font-family:      Georgia, "Times New Roman", Times, serif;
+  font-size:        small;
+  margin:           0px;
+}
+
+/*导航栏*/
+.navbar {
+  /* 流动布局 */
+  display: flex;
+  /* 均匀分布 */
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #c96f6f;
+}
+/* 导航栏链接样式 */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/*导航栏结束*/
+
+/* 整体内容区 */
+#tableContainer {
+  /* 表格布局 */
+	display: table;
+	border-spacing: 10px;
+}
+
+#tableRow {
+  /* 创建一个类似表格的布局结构 */
+	display: table-row;
+}
+/* 运动栏 */
+#sport {
+    display: table-cell;
+    background-color: #dba3a0;
+    width: 30%;
+    padding: 15px;
+    /* 设置一个元素在其父元素中垂直对齐 */
+    vertical-align: top;
+}
+#sport img {
+  width: 250px;
+  height: auto;
+}
+
+.image-container1 {
+  /* 弹性布局使其并列排列 */
+  display: flex;
+}
+
+.image-container1 img {
+  margin-right: 10px; /* 为右侧图片添加间隔 */
+  width: 260px;
+  height: auto;
+}
+
+.image-container1 img:last-child {
+  margin-right: 0; /* 移除第二个图片的右侧间隔 */
+}
+/* 旅游区 */
+#main {
+  display: table-cell;
+  background:       #dba3a0 top left;
+  font-size:        105%;
+  padding:          15px;
+  vertical-align: top;
+}
+/* 音乐区 */
+#container1 {
+  display: table-cell;
+  background:       #dba3a0 bottom right;
+  font-size:        105%;
+  padding:          15px;
+  vertical-align: top;
+}
+
+#container1 img {
+  width: 300px;
+  height: auto;
+}
+
+h1 {
+  font-size:        120%;
+  color:            #954b4b;
+}
+
+.slogan { color: #954b4b; }
+
+.music {
+  /*  */
+  text-align:       center;
+  line-height:      1.8em;
+}
+/* 页脚区 */
+#footer {
+  clear:both;
+  background-color: #c96f6f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+
